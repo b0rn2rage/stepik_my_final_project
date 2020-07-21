@@ -3,13 +3,18 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
+    # Проверям, что кнопка добавления товара в корзину есть на странице, нажатие на кнопку (добавляем товар в корзину)
     def add_to_basket(self):
         assert self.is_element_present(
-            *ProductPageLocators.BUTTON_ADD_PRODUCT_TO_BASKET), 'Кнопка добавления товара в корзину отсутствует'
-        basket_button = self.browser.find_element(*ProductPageLocators.BUTTON_ADD_PRODUCT_TO_BASKET)
+            *ProductPageLocators.ADD_PRODUCT_TO_BASKET), 'Кнопка добавления товара в корзину отсутствует'
+        basket_button = self.browser.find_element(*ProductPageLocators.ADD_PRODUCT_TO_BASKET)
         basket_button.click()
 
-    def should_be_correct_name_of_product(self):
+    def should_be_message_about_adding(self):
+        # Сообщение об успешном добавлении товара в корзину
         assert self.is_element_present(
-            *ProductPageLocators.NAME_OF_THE_PRODUCT_ADDED_TO_BASKET).text == , "Надпись об успешном добавлении товара в корзину отсутствует"
-
+            *ProductPageLocators.MESSAGE_ABOUT_SUCCESS_ADDING), 'Сообщение о добавлении товара в корзину отсутствует'
+        alert_message = self.browser.find_element(*ProductPageLocators.MESSAGE_ABOUT_SUCCESS_ADDING).text
+        product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
+        # Сообщение о добавлении товара соответствует именно тому товару, который был добавлен в корзину
+        assert alert_message == product_name, 'Сообщение о добавлении товара не совпадает с именем товара, который был добавлен в корзину'

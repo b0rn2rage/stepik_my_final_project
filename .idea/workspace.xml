@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fbb6676d-cbd9-464c-8f24-6daa14c4fbe1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/product_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_product_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -64,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595264570756</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Реализация перехода между main_page и login_page">
+      <created>1595269969671</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595269969671</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,20 +92,21 @@
     <MESSAGE value="Первый тест на основе Page Object" />
     <MESSAGE value="Проверка элемента на странице.&#10;Обработка NoSuchElementException" />
     <MESSAGE value="Добавление трёх тестов на LoginPage: на проверку url, login_form, register_form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление трёх тестов на LoginPage: на проверку url, login_form, register_form" />
+    <MESSAGE value="Реализация перехода между main_page и login_page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализация перехода между main_page и login_page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="670" y="32" key="CommitChangelistDialog2" timestamp="1595264570487">
+    <state x="670" y="32" key="CommitChangelistDialog2" timestamp="1595269969456">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="670" y="32" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595264570487" />
+    <state x="670" y="32" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595269969456" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1594918719705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594918719705" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595227479030">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595353831801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595227479030" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595353831801" />
   </component>
 </project>

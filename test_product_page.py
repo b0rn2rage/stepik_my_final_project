@@ -23,4 +23,6 @@ def test_guest_can_add_product_to_basket(browser, link):
     page.solve_quiz_and_get_code()
     page.should_be_message_about_adding()
     page.total_cost_of_the_basket()
+    page.should_not_be_success_message()
+    page.should_be_disappeared()
     # time.sleep(500)

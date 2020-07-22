@@ -28,3 +28,13 @@ class ProductPage(BasePage):
         product_price_message = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         # Стоимость товаров в корзине равна стоимости товара, добавленного в корзину
         assert basket_price_message == product_price_message, 'Стоимость товаров в корзине равна стоимости добавленного товара'
+
+    def should_not_be_success_message(self):
+        # Проверка, что сообщение об успешном добавлении товара в корзину не должно появиться в течение определенного времени
+        assert self.is_not_element_present(*ProductPageLocators.MESSAGE_ABOUT_SUCCESS_ADDING), \
+            "Success message is presented, but should not be"
+
+    def should_be_disappeared(self):
+        # Проверка, что элемент исчезает с страницы
+        assert self.is_disappeared(*ProductPageLocators.MESSAGE_ABOUT_SUCCESS_ADDING), \
+            "Message is displayed on the page, but should not be"

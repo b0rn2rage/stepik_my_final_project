@@ -17,4 +17,14 @@ class ProductPage(BasePage):
         alert_message = self.browser.find_element(*ProductPageLocators.MESSAGE_ABOUT_SUCCESS_ADDING).text
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         # Сообщение о добавлении товара соответствует именно тому товару, который был добавлен в корзину
-        assert alert_message == product_name, 'Сообщение о добавлении товара не совпадает с именем товара, который был добавлен в корзину'
+        current_url = self.browser.current_url
+        assert alert_message == product_name, f'Сообщение о добавлении товара не совпадает с именем товара, который был добавлен в корзину. Cсылка на товар – {current_url}'
+
+    def total_cost_of_the_basket(self):
+        # Сообщение о стоимости корзины отображается
+        assert self.is_element_present(
+            *ProductPageLocators.BASKET_PRICE), 'Сообщение со стоимостью товаров в корзине отсутствует'
+        basket_price_message = self.browser.find_element(*ProductPageLocators.BASKET_PRICE).text
+        product_price_message = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
+        # Стоимость товаров в корзине равна стоимости товара, добавленного в корзину
+        assert basket_price_message == product_price_message, 'Стоимость товаров в корзине равна стоимости добавленного товара'

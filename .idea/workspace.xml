@@ -4,7 +4,6 @@
     <list default="true" id="fbb6676d-cbd9-464c-8f24-6daa14c4fbe1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/product_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_product_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595360206716</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавление отрицательных проверок">
+      <created>1595447025490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595447025490</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,20 +107,21 @@
     <MESSAGE value="Добавление трёх тестов на LoginPage: на проверку url, login_form, register_form" />
     <MESSAGE value="Реализация перехода между main_page и login_page" />
     <MESSAGE value="Добавление assert'ов в метод should_be_message_about_adding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление assert'ов в метод should_be_message_about_adding" />
+    <MESSAGE value="Добавление отрицательных проверок" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление отрицательных проверок" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="670" y="32" key="CommitChangelistDialog2" timestamp="1595360206462">
+    <state x="670" y="32" key="CommitChangelistDialog2" timestamp="1595447025227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="670" y="32" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595360206462" />
+    <state x="670" y="32" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595447025227" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1594918719705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594918719705" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595441304849">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595521075801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595441304849" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595521075801" />
   </component>
 </project>

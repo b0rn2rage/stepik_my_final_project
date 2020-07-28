@@ -3,15 +3,14 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
-    """Проверям, что кнопка добавления товара в корзину есть на странице, нажатие на кнопку
-    (добавляем товар в корзину)"""
 
     def add_to_cart(self):
+        """Проверям, что кнопка добавления товара в корзину есть на странице, нажатие на кнопку
+            (добавляем товар в корзину)"""
         assert self.is_element_present(
             *ProductPageLocators.ADD_PRODUCT_TO_CART), 'Кнопка добавления товара в корзину отсутствует'
         basket_button = self.browser.find_element(*ProductPageLocators.ADD_PRODUCT_TO_CART)
         basket_button.click()
-
 
     def should_be_message_about_adding(self):
         """Сообщение об успешном добавлении товара в корзину"""
@@ -31,7 +30,8 @@ class ProductPage(BasePage):
         basket_price_message = self.browser.find_element(*ProductPageLocators.CART_PRICE).text
         product_price_message = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         """Стоимость товаров в корзине равна стоимости товара, добавленного в корзину"""
-        assert basket_price_message == product_price_message, 'Стоимость товаров в корзине равна стоимости добавленного товара'
+        assert basket_price_message == product_price_message, 'Стоимость товаров в корзине равна ' \
+                                                              'стоимости добавленного товара'
 
     def should_not_be_success_message(self):
         """Проверка, что сообщение об успешном добавлении товара в корзину

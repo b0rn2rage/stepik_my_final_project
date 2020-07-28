@@ -16,8 +16,8 @@ class BasePage():
     def go_to_login_page(self):
         """Переход на страницу логина"""
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Ссылка на логин не отображается на странице"
-        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
-        link.click()
+        login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        login_link.click()
 
     def go_to_cart(self):
         """Переход в корзину по кнопке "Посмотреть корзину" """
@@ -26,12 +26,11 @@ class BasePage():
         check_cart_button = self.browser.find_element(*BasePageLocators.CHECK_CART)
         check_cart_button.click()
 
-
     def is_element_present(self, how, what):
         """Проверка наличия элемента на странице"""
         try:
             self.browser.find_element(how, what)
-        except (NoSuchElementException):
+        except NoSuchElementException:
             return False
         return True
 
@@ -76,4 +75,8 @@ class BasePage():
 
     def should_be_login_link(self):
         """Проверка наличия на странице ссылки, которая ведет на страницу логина"""
-        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Ссылка на логин не отображается на странице  "
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Ссылка на логин не отображается на странице"
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), 'Иконка юзера не отображается, возможно' \
+                                                                     'пользователь не авторизован'

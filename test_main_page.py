@@ -31,5 +31,5 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     page = BasketPage(browser, link)
     page.open()
     page.go_to_cart()
-    page.cart_should_be_empty_of_items()  # Негативная проверка
-    page.message_about_cart_is_empty()  # Позитивная проверка
+    page.cart_should_be_empty_of_items()
+    page.message_about_cart_is_empty()

@@ -21,7 +21,7 @@ class BasePage():
 
     def go_to_cart(self):
         """Переход в корзину по кнопке "Посмотреть корзину" """
-        assert self.is_element_present(*BasePageLocators.CHECK_CART), "Кнопка 'Посмотреть корзину'" \
+        assert self.is_element_present(*BasePageLocators.CHECK_CART), "Кнопка 'Посмотреть корзину' " \
                                                                       "отсутствует на странице"
         check_cart_button = self.browser.find_element(*BasePageLocators.CHECK_CART)
         check_cart_button.click()
@@ -46,7 +46,6 @@ class BasePage():
     def is_disappeared(self, how, what, timeout=4):
         """Проверка, что элемент исчезает со страницы"""
         try:
-            """Третий аргумент '1' говорит о том, что webdriver делает запросы каждую секунду"""
             WebDriverWait(self.browser, timeout, 1, TimeoutException). \
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
@@ -78,5 +77,5 @@ class BasePage():
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Ссылка на логин не отображается на странице"
 
     def should_be_authorized_user(self):
-        assert self.is_element_present(*BasePageLocators.USER_ICON), 'Иконка юзера не отображается, возможно' \
+        assert self.is_element_present(*BasePageLocators.USER_ICON), 'Иконка юзера не отображается, возможно ' \
                                                                      'пользователь не авторизован'
